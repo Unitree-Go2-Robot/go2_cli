@@ -35,12 +35,6 @@ class SwitchObstaclesAvoidanceVerb(VerbExtension):
             choices=choices,
             help='Name of the service.',
         ).completer = ChoicesCompleter(choices)
-        parser.add_argument(
-            'VALUE',
-            nargs='?',
-            choices=['true', 'false'],
-            help='Value of the service.'
-        )
 
     def main(self, *, args):
         with NodeStrategy(args) as node:
